@@ -89,7 +89,7 @@ a.skip {
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 3 code here*/
-  position: relative;
+  position: absolute;
   left: -500px;
 }
 
@@ -105,7 +105,7 @@ nav a:focus {
 .container {
   /* Requirement 5 code here*/
   display: grid;
-  grid-column: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   row-gap: 30px;
 }
 
@@ -115,7 +115,7 @@ nav a:focus {
   /* uses header.jpg as the background image with a  fallback color of #DDDDDD,#858585, #707070, or #B3B3B3; */
   /* has a minimum height of 400px */
   background-image: url('../images/header.jpg');
-  background-color: #DDDDDD;
+  background-color: #858585;
   min-height: 400px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -166,7 +166,7 @@ img {
   /*  Are aligned in the center. */
   align-self: center;
   /* Have a max-height of 25% of the viewport height */
-  max-height: 25%;
+  max-height: 25vh;
   /* Displays any overflow content via a scrollbar */
   overflow: scroll;
 }
@@ -199,8 +199,9 @@ img {
 
   /* Requirement 13 */
   .container {
-    grid-column: 50px auto 500px auto 50px;
-    grid-row: 300px 300px 300px 300px;
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 300px 300px 300px 300px;
   }
 
   /* Requirement 14 */
